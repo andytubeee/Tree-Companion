@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,13 +15,21 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.greenAccent
-      ),
+          brightness: Brightness.light, primaryColor: Colors.green),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Tree Companion',style: TextStyle(color: Colors.white),),
+          title: const Text(
+            'Tree Companion',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
+          ],
+        )),
       ),
     );
   }
