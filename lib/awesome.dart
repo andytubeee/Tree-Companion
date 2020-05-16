@@ -1,25 +1,25 @@
-import 'package:Tree_Companion/Postalcode.dart';
+import 'package:Tree_Companion/types.dart';
 import 'package:flutter/material.dart';
 
-class Welcome extends StatelessWidget {
+class Awesome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomeApp()
+      home: AwesomeApp(),
     );
   }
 }
 
-class WelcomeApp extends StatelessWidget {
+class AwesomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Image(image: AssetImage("assets/WelcomePG.png"),),
+      body: Image.asset("assets/awesomePG.png"),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Postalcode()),
+            MaterialPageRoute(builder: (context) => Types()),
           );
         },
         label: Text('Continue'),

@@ -1,30 +1,30 @@
-import 'package:Tree_Companion/Postalcode.dart';
+import 'package:Tree_Companion/Last.dart';
 import 'package:flutter/material.dart';
 
-class Welcome extends StatelessWidget {
+class Types extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomeApp()
+      home: TypesApp(),
     );
   }
 }
 
-class WelcomeApp extends StatelessWidget {
+class TypesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Image(image: AssetImage("assets/WelcomePG.png"),),
+      body: Image.asset("assets/typesPG.png"),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Postalcode()),
+            MaterialPageRoute(builder: (context) => Last()),
           );
         },
         label: Text('Continue'),
         icon: Icon(Icons.arrow_right),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
       ),
     );
   }
