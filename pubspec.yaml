@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.7.5
+  adobe_xd: ^0.1.3
 
 flutter_icons:
   android: true
