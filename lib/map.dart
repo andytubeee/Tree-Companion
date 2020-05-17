@@ -35,7 +35,8 @@ class _MapPState extends State<MapP> {
           _controller.complete(controller);
         },
         markers: {
-          homeMarker
+          homeMarker,
+          plasticGarbage1
         },
       ),
     );
@@ -44,6 +45,14 @@ class _MapPState extends State<MapP> {
     markerId: MarkerId("home"),
     position: LatLng(43.4643, -80.5204),
     infoWindow: InfoWindow(title: "Home, Waterloo"),
+    icon: BitmapDescriptor.defaultMarkerWithHue(
+      BitmapDescriptor.hueRed
+    )
+  );
+  Marker plasticGarbage1=Marker(
+    markerId: MarkerId("plasticGarbage1"),
+    position: LatLng(43.4722286, -80.5908138),
+    infoWindow: InfoWindow(title: "Plastic Garbage Found in Laurelwood"),
     icon: BitmapDescriptor.defaultMarkerWithHue(
       BitmapDescriptor.hueRed
     )

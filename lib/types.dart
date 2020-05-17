@@ -1,6 +1,7 @@
 import 'package:Tree_Companion/Last.dart';
 import 'package:Tree_Companion/map.dart';
 import 'package:flutter/material.dart';
+import 'leaderboard.dart';
 
 class Types extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class TypesApp extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MapP()),
+            MaterialPageRoute(builder: (context) => Leaderboard()),
           );
         },
         label: Text('Continue'),
