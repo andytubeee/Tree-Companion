@@ -27,7 +27,7 @@ class GiftCardApp extends StatelessWidget {
                 new FloatingActionButton(
                   onPressed: () {
                     Navigator.push(
-                      context,
+                      context,  
                       MaterialPageRoute(builder: (context) => Wallet()),
                     );
                   },
