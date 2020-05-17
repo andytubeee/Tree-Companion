@@ -16,11 +16,12 @@ class LdApp extends StatelessWidget {
         body: Container(
           child: Stack(
             children: <Widget>[
-              new Image.asset("assets/leaderboardPG.png"),
+              new Image.asset("assets/leaderboardPG.png", width: MediaQuery.of(context).size.width,),
             ],
           ),
         ),
-        floatingActionButton: Column(
+        floatingActionButton: Container(
+            child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             new FloatingActionButton.extended(
@@ -49,6 +50,6 @@ class LdApp extends StatelessWidget {
               backgroundColor: Colors.green,
             ),
           ],
-        ));
+        )));
   }
 }
