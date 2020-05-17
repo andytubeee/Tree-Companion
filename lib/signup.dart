@@ -1,36 +1,36 @@
+import 'package:Tree_Companion/Signin.dart';
 import 'package:Tree_Companion/Welcome.dart';
-import 'package:Tree_Companion/signup.dart';
 import 'package:flutter/material.dart';
 
-class Signin extends StatelessWidget {
+class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SigninApp());
+    return MaterialApp(home: SignupApp());
   }
 }
 
-class SigninApp extends StatelessWidget {
+class SignupApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Stack(
           children: <Widget>[
-            new Image(image: AssetImage("assets/SigninPG.png")),
+            new Image.asset("assets/SignupPG.png"),
             new Container(
-                margin: EdgeInsets.only(left: 185, top: 38),
+                margin: EdgeInsets.only(left: 70, top: 38),
                 child: FlatButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Signup()),
+                        MaterialPageRoute(builder: (context) => Signin()),
                       );
                     },
                     child: Text(
-                      "Sign Up",
+                      "Sign In",
                       style: TextStyle(fontFamily: 'Gibson'),
                     ))),
-            new Container(
+                    new Container(
                 width: 300,
                 margin: EdgeInsets.only(left: 30, top: 250),
                 child: TextFormField(
@@ -50,7 +50,18 @@ class SigninApp extends StatelessWidget {
                     icon: Icon(Icons.enhanced_encryption),
                     labelText: 'Password',
                   ),
-                ))
+                )),
+                new Container(
+                width: 300,
+                margin: EdgeInsets.only(left: 30, top: 450),
+                child: TextFormField(
+                  style: TextStyle(color: Colors.blueGrey, fontSize: 20),
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.enhanced_encryption),
+                    labelText: 'Confirm your Password',
+                  ),
+                ))                  
           ],
         ),
       ),
@@ -61,7 +72,7 @@ class SigninApp extends StatelessWidget {
             MaterialPageRoute(builder: (context) => Welcome()),
           );
         },
-        label: Text('Login'),
+        label: Text('Sign Up'),
         icon: Icon(Icons.arrow_right),
         backgroundColor: Colors.green,
       ),
