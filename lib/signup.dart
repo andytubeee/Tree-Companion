@@ -9,6 +9,9 @@ class Signup extends StatelessWidget {
   }
 }
 
+String pw = "";
+String confirmpw = "";
+
 class SignupApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,11 +33,14 @@ class SignupApp extends StatelessWidget {
                       "Sign In",
                       style: TextStyle(fontFamily: 'Gibson'),
                     ))),
-                    new Container(
+            new Container(
                 width: 300,
                 margin: EdgeInsets.only(left: 30, top: 250),
                 child: TextFormField(
                   style: TextStyle(color: Colors.blueGrey, fontSize: 20),
+                  validator: (String value) {
+                    return value.contains('@') ? null : 'Invalid Email Address';
+                  },
                   decoration: const InputDecoration(
                     icon: Icon(Icons.email),
                     labelText: 'Email',
@@ -46,31 +52,37 @@ class SignupApp extends StatelessWidget {
                 child: TextFormField(
                   style: TextStyle(color: Colors.blueGrey, fontSize: 20),
                   obscureText: true,
+                  onSaved: (String value) {
+                    pw = value;
+                  },
                   decoration: const InputDecoration(
                     icon: Icon(Icons.enhanced_encryption),
                     labelText: 'Password',
                   ),
                 )),
-                new Container(
+            new Container(
                 width: 300,
                 margin: EdgeInsets.only(left: 30, top: 450),
                 child: TextFormField(
                   style: TextStyle(color: Colors.blueGrey, fontSize: 20),
                   obscureText: true,
+                  onSaved: (String value) {
+                    confirmpw = value;
+                  },
                   decoration: const InputDecoration(
                     icon: Icon(Icons.enhanced_encryption),
                     labelText: 'Confirm your Password',
                   ),
-                ))                  
+                ))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Welcome()),
-          );
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Welcome()),
+            );
         },
         label: Text('Sign Up'),
         icon: Icon(Icons.arrow_right),

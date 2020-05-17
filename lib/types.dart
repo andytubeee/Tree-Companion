@@ -1,4 +1,5 @@
 import 'package:Tree_Companion/Last.dart';
+import 'package:Tree_Companion/map.dart';
 import 'package:flutter/material.dart';
 
 class Types extends StatelessWidget {
@@ -19,7 +20,7 @@ class TypesApp extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Last()),
+            MaterialPageRoute(builder: (context) => MapP()),
           );
         },
         label: Text('Continue'),
