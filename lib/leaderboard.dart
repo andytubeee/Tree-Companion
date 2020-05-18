@@ -1,3 +1,4 @@
+import 'package:Tree_Companion/dashboard.dart';
 import 'package:Tree_Companion/map.dart';
 import 'package:Tree_Companion/wallet.dart';
 import 'package:flutter/material.dart';
@@ -16,40 +17,26 @@ class LdApp extends StatelessWidget {
         body: Container(
           child: Stack(
             children: <Widget>[
-              new Image.asset("assets/leaderboardPG.png", width: MediaQuery.of(context).size.width,),
+              new Image.asset(
+                "assets/leaderboardPG.png",
+                width: MediaQuery.of(context).size.width,
+              ),
             ],
           ),
         ),
-        floatingActionButton: Container(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            new FloatingActionButton.extended(
-              heroTag: "WalletBtn",
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Wallet()),
-                );
-              },
-              label: Text('Wallet'),
-              icon: Icon(Icons.account_balance_wallet),
-              backgroundColor: Colors.green,
-            ),
-            new SizedBox(height: 10),
-            new FloatingActionButton.extended(
-              heroTag: "MapBtn",
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MapP()),
-                );
-              },
-              label: Text('Map'),
-              icon: Icon(Icons.map),
-              backgroundColor: Colors.green,
-            ),
-          ],
-        )));
+        floatingActionButton: new Container(
+          margin: EdgeInsets.only(right: 180),
+          child: FloatingActionButton.extended(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Dashboard()),
+              );
+            },
+            label: Text("Dashboard"),
+            icon: Icon(Icons.arrow_left),
+            backgroundColor: Colors.green,
+          ),
+        ));
   }
 }

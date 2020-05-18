@@ -1,3 +1,4 @@
+import 'package:Tree_Companion/dashboard.dart';
 import 'package:Tree_Companion/giftcard.dart';
 import 'package:flutter/material.dart';
 import 'leaderboard.dart';
@@ -51,7 +52,7 @@ class WalletApp extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Leaderboard()),
+                      MaterialPageRoute(builder: (context) => Dashboard()),
                     );
                   },
                   label: Text("Back"),

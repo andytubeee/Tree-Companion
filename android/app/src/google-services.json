@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "608751925065",
+    "firebase_url": "https://treecompanion.firebaseio.com",
+    "project_id": "treecompanion",
+    "storage_bucket": "treecompanion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608751925065:android:97ebf3fdf1bedb89e0cc98",
+        "android_client_info": {
+          "package_name": "com.example.tree_companion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608751925065-59rqldqgmitc3r9g3nu1g31a497lf0ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2o29CwJaigWRlu1q-YKbU5A660OUtaAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608751925065-59rqldqgmitc3r9g3nu1g31a497lf0ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

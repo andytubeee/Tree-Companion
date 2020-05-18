@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:Tree_Companion/dashboard.dart';
 import 'package:Tree_Companion/leaderboard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -24,7 +25,7 @@ class _MapPState extends State<MapP> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Leaderboard()),
+                  MaterialPageRoute(builder: (context) => Dashboard()),
                 );
               },
               label: Text("Back"),
